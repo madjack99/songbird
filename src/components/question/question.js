@@ -9,7 +9,9 @@ import Col from 'react-bootstrap/Col';
 
 import './question.css';
 
-const Question = () => {
+const Question = ({ currentQuestionData, correctAnswer }) => {
+  const { audio } = currentQuestionData[correctAnswer];
+
   return (
     <Container className="question">
       <Row>
@@ -17,7 +19,7 @@ const Question = () => {
           <QuestionInfo />
         </Col>
         <Col>
-          <QuestionAudio />
+          <QuestionAudio src={audio} />
         </Col>
       </Row>
     </Container>

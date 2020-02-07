@@ -14,13 +14,17 @@ const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(generateRandomAnswer());
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+
   const currentQuestionData = birdsData[currentQuestion];
 
   return (
     <div className="app">
       <Header />
       <BirdCategory />
-      <Question />
+      <Question
+        currentQuestionData={currentQuestionData}
+        correctAnswer={correctAnswer}
+      />
       <Main
         currentQuestionData={currentQuestionData}
         correctAnswer={correctAnswer}

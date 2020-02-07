@@ -7,13 +7,15 @@ import Figure from 'react-bootstrap/Figure';
 const Description = ({ selectedAnswer, currentQuestionData }) => {
   const bird = currentQuestionData[selectedAnswer];
   if (bird) {
+    const { name, species, description } = bird;
+
     return (
       <div className="description">
         <Figure.Image width={200} height={155} src={bird.image} />
         <QuestionAudio src={bird.audio} />
-        <h2>{bird.name}</h2>
-        <h3>{bird.species}</h3>
-        <p>{bird.description}</p>
+        <h2>{name}</h2>
+        <h3>{species}</h3>
+        <p>{description}</p>
       </div>
     );
   }
