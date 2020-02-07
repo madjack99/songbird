@@ -15,6 +15,7 @@ const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(generateRandomAnswer());
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isQuestionAnswered, setIsQuestionAnswered] = useState(false);
 
   const currentQuestionData = birdsData[currentQuestion];
 
@@ -25,6 +26,7 @@ const App = () => {
       <Question
         currentQuestionData={currentQuestionData}
         correctAnswer={correctAnswer}
+        isQuestionAnswered={isQuestionAnswered}
       />
       <Main
         currentQuestionData={currentQuestionData}

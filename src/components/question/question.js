@@ -9,14 +9,22 @@ import Col from 'react-bootstrap/Col';
 
 import './question.css';
 
-const Question = ({ currentQuestionData, correctAnswer }) => {
+const Question = ({
+  currentQuestionData,
+  correctAnswer,
+  isQuestionAnswered,
+}) => {
   const { audio, name, image } = currentQuestionData[correctAnswer];
 
   return (
     <Container className="question">
       <Row>
         <Col>
-          <QuestionInfo name={name} image={image} />
+          <QuestionInfo
+            name={name}
+            image={image}
+            isQuestionAnswered={isQuestionAnswered}
+          />
         </Col>
         <Col>
           <QuestionAudio src={audio} />
