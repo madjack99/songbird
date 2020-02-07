@@ -6,7 +6,7 @@ import 'react-h5-audio-player/lib/styles.css';
 import './question-audio.css';
 
 const QuestionAudio = ({ src }) => {
-  return <AudioPlayer autoPlay src={src} onPlay={e => console.log('onPlay')} />;
+  return <AudioPlayer autoPlay src={src} />;
 };
 
 export default QuestionAudio;

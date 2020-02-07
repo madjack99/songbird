@@ -4,6 +4,7 @@ import Header from '../header';
 import BirdCategory from '../bird-category';
 import Question from '../question';
 import Main from '../main';
+import NextButton from '../next-button';
 
 import birdsData from '../../services';
 import { generateRandomAnswer } from '../../utils';
@@ -31,6 +32,7 @@ const App = () => {
         setSelectedAnswer={setSelectedAnswer}
         selectedAnswer={selectedAnswer}
       />
+      <NextButton />
     </div>
   );
 };
