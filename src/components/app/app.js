@@ -13,6 +13,7 @@ import './app.css';
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(generateRandomAnswer());
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
   const currentQuestionData = birdsData[currentQuestion];
 
   return (
@@ -23,6 +24,8 @@ const App = () => {
       <Main
         currentQuestionData={currentQuestionData}
         correctAnswer={correctAnswer}
+        setSelectedAnswer={setSelectedAnswer}
+        selectedAnswer={selectedAnswer}
       />
     </div>
   );

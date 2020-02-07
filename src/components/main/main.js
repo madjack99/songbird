@@ -15,7 +15,7 @@ const Main = props => {
           <Answers {...props} />
         </Col>
         <Col>
-          <Description />
+          <Description {...props} />
         </Col>
       </Row>
     </Container>
