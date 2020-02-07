@@ -1,0 +1,25 @@
+.bird-category {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background: skyblue;
+  border-radius: 5px;
+}
+
+.bird-category__item {
+  padding: 10px;
+  border: 1px solid darkblue;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bird-category__item_active {
+  background: salmon;
+}
+
+@media screen and (max-width: 777px) {
+  .bird-category {
+    flex-direction: column;
+  }
+}
