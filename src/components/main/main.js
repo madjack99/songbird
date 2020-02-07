@@ -7,12 +7,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const Main = () => {
+const Main = props => {
   return (
     <Container className="question">
       <Row>
         <Col>
-          <Answers />
+          <Answers {...props} />
         </Col>
         <Col>
           <Description />
