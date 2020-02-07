@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Header from '../header';
 import BirdCategory from '../bird-category';
 import Question from '../question';
+import Main from '../main';
+
 import birdsData from '../../services';
 import { generateRandomAnswer } from '../../utils';
 
@@ -20,6 +22,7 @@ const App = () => {
       <Header />
       <BirdCategory />
       <Question />
+      <Main />
     </div>
   );
 };
