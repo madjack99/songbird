@@ -10,13 +10,13 @@ import Col from 'react-bootstrap/Col';
 import './question.css';
 
 const Question = ({ currentQuestionData, correctAnswer }) => {
-  const { audio } = currentQuestionData[correctAnswer];
+  const { audio, name, image } = currentQuestionData[correctAnswer];
 
   return (
     <Container className="question">
       <Row>
         <Col>
-          <QuestionInfo />
+          <QuestionInfo name={name} image={image} />
         </Col>
         <Col>
           <QuestionAudio src={audio} />
