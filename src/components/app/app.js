@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../header';
 import BirdCategory from '../bird-category';
 import Question from '../question';
+import birdsData from '../../services';
 
 import './app.css';
 
