@@ -4,12 +4,11 @@
   justify-content: space-between;
   list-style: none;
   background: skyblue;
-  border-radius: 5px;
 }
 
 .bird-category__item {
   padding: 10px;
-  border: 1px solid darkblue;
+  border: 1px solid white;
   text-align: center;
   color: #ffffff;
 }
