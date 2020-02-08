@@ -9,7 +9,10 @@ const Answers = ({
   correctAnswer,
   setSelectedAnswer,
   setIsQuestionAnswered,
+  isQuestionAnswered,
+  currentQuestion,
 }) => {
+  console.log('answer rerender');
   const renderListItems = currentQuestionData.map((item, idx) => {
     return (
       <AnswerItem
@@ -18,6 +21,8 @@ const Answers = ({
         correctAnswer={correctAnswer}
         setSelectedAnswer={setSelectedAnswer}
         setIsQuestionAnswered={setIsQuestionAnswered}
+        isQuestionAnswered={isQuestionAnswered}
+        currentQuestion={currentQuestion}
       >
         {item.name}
       </AnswerItem>

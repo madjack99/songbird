@@ -11,9 +11,11 @@ const NextButton = ({
   setCurrentQuestion,
   setIsQuestionAnswered,
   setCorrectAnswer,
+  setSelectedAnswer,
 }) => {
   const updateCurrentQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
+    setSelectedAnswer(null);
     setIsQuestionAnswered(false);
     setCorrectAnswer(generateRandomAnswer());
   };

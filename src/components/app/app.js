@@ -34,6 +34,7 @@ const App = () => {
         setSelectedAnswer={setSelectedAnswer}
         selectedAnswer={selectedAnswer}
         setIsQuestionAnswered={setIsQuestionAnswered}
+        currentQuestion={currentQuestion}
       />
       <NextButton
         isQuestionAnswered={isQuestionAnswered}
@@ -41,6 +42,7 @@ const App = () => {
         currentQuestion={currentQuestion}
         setIsQuestionAnswered={setIsQuestionAnswered}
         setCorrectAnswer={setCorrectAnswer}
+        setSelectedAnswer={setSelectedAnswer}
       />
     </div>
   );

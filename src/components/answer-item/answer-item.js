@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -8,8 +8,14 @@ const AnswerItem = props => {
     correctAnswer,
     setSelectedAnswer,
     setIsQuestionAnswered,
+    currentQuestion,
   } = props;
   const [variant, setVariant] = useState('light');
+  console.log('answer item');
+
+  useEffect(() => {
+    setVariant('light');
+  }, [currentQuestion]);
 
   const handleOptionSelection = () => {
     setSelectedAnswer(clickedOption);
