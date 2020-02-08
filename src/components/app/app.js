@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <BirdCategory />
+      <BirdCategory currentQuestion={currentQuestion} />
       <Question
         currentQuestionData={currentQuestionData}
         correctAnswer={correctAnswer}
@@ -35,7 +35,11 @@ const App = () => {
         selectedAnswer={selectedAnswer}
         setIsQuestionAnswered={setIsQuestionAnswered}
       />
-      <NextButton isQuestionAnswered={isQuestionAnswered} />
+      <NextButton
+        isQuestionAnswered={isQuestionAnswered}
+        setCurrentQuestion={setCurrentQuestion}
+        currentQuestion={currentQuestion}
+      />
     </div>
   );
 };
