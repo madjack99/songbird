@@ -39,6 +39,8 @@ const App = () => {
         isQuestionAnswered={isQuestionAnswered}
         setCurrentQuestion={setCurrentQuestion}
         currentQuestion={currentQuestion}
+        setIsQuestionAnswered={setIsQuestionAnswered}
+        setCorrectAnswer={setCorrectAnswer}
       />
     </div>
   );
