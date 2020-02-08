@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 const AnswerItem = props => {
-  const { clickedOption, correctAnswer, setSelectedAnswer } = props;
+  const {
+    clickedOption,
+    correctAnswer,
+    setSelectedAnswer,
+    setIsQuestionAnswered,
+  } = props;
   const [variant, setVariant] = useState('light');
 
   const handleOptionSelection = () => {
@@ -11,6 +16,7 @@ const AnswerItem = props => {
     if (clickedOption !== correctAnswer) {
       setVariant('danger');
     } else {
+      setIsQuestionAnswered(true);
       setVariant('success');
     }
   };

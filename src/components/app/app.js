@@ -33,8 +33,9 @@ const App = () => {
         correctAnswer={correctAnswer}
         setSelectedAnswer={setSelectedAnswer}
         selectedAnswer={selectedAnswer}
+        setIsQuestionAnswered={setIsQuestionAnswered}
       />
-      <NextButton />
+      <NextButton isQuestionAnswered={isQuestionAnswered} />
     </div>
   );
 };
