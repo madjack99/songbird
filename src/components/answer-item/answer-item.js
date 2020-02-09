@@ -10,8 +10,11 @@ const AnswerItem = props => {
     setIsQuestionAnswered,
     currentQuestion,
     isQuestionAnswered,
+    setCurrentScore,
+    currentScore,
   } = props;
   const [variant, setVariant] = useState('light');
+  const [itemClicked, setItemClicked] = useState(false);
   console.log('answer item');
 
   useEffect(() => {
@@ -22,6 +25,9 @@ const AnswerItem = props => {
     setSelectedAnswer(clickedOption);
     if (clickedOption !== correctAnswer) {
       setVariant('danger');
+      if (!itemClicked) {
+        setCurrentScore(currentScore - 1);
+      }
     } else {
       setIsQuestionAnswered(true);
       setVariant('success');

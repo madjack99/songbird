@@ -11,6 +11,8 @@ const Answers = ({
   setIsQuestionAnswered,
   isQuestionAnswered,
   currentQuestion,
+  setCurrentScore,
+  currentScore,
 }) => {
   console.log('answer rerender');
   const renderListItems = currentQuestionData.map((item, idx) => {
@@ -23,6 +25,8 @@ const Answers = ({
         setIsQuestionAnswered={setIsQuestionAnswered}
         isQuestionAnswered={isQuestionAnswered}
         currentQuestion={currentQuestion}
+        setCurrentScore={setCurrentScore}
+        currentScore={currentScore}
       >
         {item.name}
       </AnswerItem>

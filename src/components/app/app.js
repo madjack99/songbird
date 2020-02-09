@@ -16,12 +16,14 @@ const App = () => {
   const [correctAnswer, setCorrectAnswer] = useState(generateRandomAnswer());
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isQuestionAnswered, setIsQuestionAnswered] = useState(false);
+  const [currentScore, setCurrentScore] = useState(5);
+  const [totalScore, setTotalScore] = useState(0);
 
   const currentQuestionData = birdsData[currentQuestion];
 
   return (
     <div className="app">
-      <Header />
+      <Header score={totalScore} />
       <BirdCategory currentQuestion={currentQuestion} />
       <Question
         currentQuestionData={currentQuestionData}
@@ -36,6 +38,8 @@ const App = () => {
         setIsQuestionAnswered={setIsQuestionAnswered}
         currentQuestion={currentQuestion}
         isQuestionAnswered={isQuestionAnswered}
+        setCurrentScore={setCurrentScore}
+        currentScore={currentScore}
       />
       <NextButton
         isQuestionAnswered={isQuestionAnswered}
@@ -44,6 +48,10 @@ const App = () => {
         setIsQuestionAnswered={setIsQuestionAnswered}
         setCorrectAnswer={setCorrectAnswer}
         setSelectedAnswer={setSelectedAnswer}
+        totalScore={totalScore}
+        setTotalScore={setTotalScore}
+        setCurrentScore={setCurrentScore}
+        currentScore={currentScore}
       />
     </div>
   );

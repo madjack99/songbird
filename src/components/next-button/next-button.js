@@ -12,12 +12,18 @@ const NextButton = ({
   setIsQuestionAnswered,
   setCorrectAnswer,
   setSelectedAnswer,
+  totalScore,
+  setTotalScore,
+  setCurrentScore,
+  currentScore,
 }) => {
   const updateCurrentQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
     setSelectedAnswer(null);
     setIsQuestionAnswered(false);
     setCorrectAnswer(generateRandomAnswer());
+    setTotalScore(totalScore + currentScore);
+    setCurrentScore(5);
   };
 
   return (
