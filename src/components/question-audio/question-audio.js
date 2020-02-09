@@ -1,12 +1,18 @@
 import React from 'react';
 
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import { createMuiTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
+import AudioPlayer from 'material-ui-audio-player';
 
 import './question-audio.css';
 
 const QuestionAudio = ({ src }) => {
-  return <AudioPlayer src={src} />;
+  const muiTheme = createMuiTheme({});
+  return (
+    <ThemeProvider theme={muiTheme}>
+      <AudioPlayer key={src} src={src} />
+    </ThemeProvider>
+  );
 };
 
 export default QuestionAudio;

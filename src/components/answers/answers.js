@@ -14,7 +14,6 @@ const Answers = ({
   setCurrentScore,
   currentScore,
 }) => {
-  console.log('answer rerender');
   const renderListItems = currentQuestionData.map((item, idx) => {
     return (
       <AnswerItem

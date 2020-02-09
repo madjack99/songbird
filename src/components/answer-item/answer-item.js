@@ -15,7 +15,6 @@ const AnswerItem = props => {
   } = props;
   const [variant, setVariant] = useState('light');
   const [itemClicked, setItemClicked] = useState(false);
-  console.log('answer item');
 
   useEffect(() => {
     setVariant('light');
@@ -29,6 +28,7 @@ const AnswerItem = props => {
         setCurrentScore(currentScore - 1);
         setItemClicked(true);
       }
+      console.log('test');
     } else {
       setIsQuestionAnswered(true);
       setVariant('success');
