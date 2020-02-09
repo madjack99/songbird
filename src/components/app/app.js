@@ -35,6 +35,7 @@ const App = () => {
         selectedAnswer={selectedAnswer}
         setIsQuestionAnswered={setIsQuestionAnswered}
         currentQuestion={currentQuestion}
+        isQuestionAnswered={isQuestionAnswered}
       />
       <NextButton
         isQuestionAnswered={isQuestionAnswered}

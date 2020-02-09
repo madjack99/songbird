@@ -9,6 +9,7 @@ const AnswerItem = props => {
     setSelectedAnswer,
     setIsQuestionAnswered,
     currentQuestion,
+    isQuestionAnswered,
   } = props;
   const [variant, setVariant] = useState('light');
   console.log('answer item');
@@ -28,7 +29,10 @@ const AnswerItem = props => {
   };
 
   return (
-    <ListGroup.Item variant={variant} onClick={handleOptionSelection}>
+    <ListGroup.Item
+      variant={variant}
+      onClick={isQuestionAnswered ? null : handleOptionSelection}
+    >
       {props.children}
     </ListGroup.Item>
   );
