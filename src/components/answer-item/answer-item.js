@@ -40,7 +40,11 @@ const AnswerItem = props => {
   return (
     <ListGroup.Item
       variant={variant}
-      onClick={isQuestionAnswered ? null : handleOptionSelection}
+      onClick={
+        isQuestionAnswered
+          ? () => setSelectedAnswer(clickedOption)
+          : handleOptionSelection
+      }
     >
       {props.children}
     </ListGroup.Item>
