@@ -18,17 +18,19 @@ const AnswerItem = props => {
 
   useEffect(() => {
     setVariant('light');
+    setItemClicked(false);
   }, [currentQuestion]);
 
   const handleOptionSelection = () => {
     setSelectedAnswer(clickedOption);
     if (clickedOption !== correctAnswer) {
       setVariant('danger');
+      console.log('itemClicked', itemClicked);
       if (!itemClicked) {
+        console.log('click');
         setCurrentScore(currentScore - 1);
         setItemClicked(true);
       }
-      console.log('test');
     } else {
       setIsQuestionAnswered(true);
       setVariant('success');

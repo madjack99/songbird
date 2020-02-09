@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header score={totalScore} />
+      <Header score={totalScore} currentScore={currentScore} />
       <BirdCategory currentQuestion={currentQuestion} />
       <Question
         currentQuestionData={currentQuestionData}
