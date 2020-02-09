@@ -27,6 +27,7 @@ const AnswerItem = props => {
       setVariant('danger');
       if (!itemClicked) {
         setCurrentScore(currentScore - 1);
+        setItemClicked(true);
       }
     } else {
       setIsQuestionAnswered(true);
