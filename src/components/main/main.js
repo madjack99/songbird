@@ -11,10 +11,10 @@ const Main = props => {
   return (
     <Container className="question">
       <Row>
-        <Col>
+        <Col className="question-col">
           <Answers {...props} />
         </Col>
-        <Col>
+        <Col className="question-col">
           <Description {...props} />
         </Col>
       </Row>

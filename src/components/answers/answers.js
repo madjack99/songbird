@@ -4,6 +4,8 @@ import AnswerItem from '../answer-item';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
+import './answers.css';
+
 const Answers = ({
   currentQuestionData,
   correctAnswer,
@@ -31,7 +33,7 @@ const Answers = ({
       </AnswerItem>
     );
   });
-  return <ListGroup>{renderListItems}</ListGroup>;
+  return <ListGroup className="answers mt-2 p-2">{renderListItems}</ListGroup>;
 };
 
 export default Answers;

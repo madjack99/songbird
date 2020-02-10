@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-  background: skyblue;
+  background: rgb(0, 123, 255);
 }
 
 .bird-category__item {
@@ -14,7 +14,7 @@
 }
 
 .bird-category__item_active {
-  background: salmon;
+  background: rgb(245, 0, 87);
 }
 
 @media screen and (max-width: 777px) {

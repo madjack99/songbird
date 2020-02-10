@@ -9,9 +9,11 @@ import './question-audio.css';
 const QuestionAudio = ({ src }) => {
   const muiTheme = createMuiTheme({});
   return (
-    <ThemeProvider theme={muiTheme}>
-      <AudioPlayer key={src} src={src} />
-    </ThemeProvider>
+    <div className="audio">
+      <ThemeProvider theme={muiTheme}>
+        <AudioPlayer key={src} src={src} variation="secondary" />
+      </ThemeProvider>
+    </div>
   );
 };
 

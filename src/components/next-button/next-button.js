@@ -34,6 +34,7 @@ const NextButton = ({
         block
         disabled={!isQuestionAnswered}
         onClick={updateCurrentQuestion}
+        className="mt-4"
       >
         Next question
       </Button>

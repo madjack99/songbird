@@ -19,14 +19,14 @@ const Question = ({
   return (
     <Container className="question">
       <Row>
-        <Col>
+        <Col className="question-col">
           <QuestionInfo
             name={name}
             image={image}
             isQuestionAnswered={isQuestionAnswered}
           />
         </Col>
-        <Col>
+        <Col className="question-col">
           <QuestionAudio src={audio} />
         </Col>
       </Row>

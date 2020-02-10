@@ -1,0 +1,7 @@
+.description {
+  border: 3px solid rgb(0, 123, 255);
+}
+
+.description__name {
+  margin-top: 10px;
+}
