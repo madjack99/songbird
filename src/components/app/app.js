@@ -9,6 +9,8 @@ import NextButton from '../next-button';
 import birdsData from '../../services';
 import { generateRandomAnswer } from '../../utils';
 
+import Container from 'react-bootstrap/Container';
+
 import './app.css';
 
 const App = () => {
@@ -20,6 +22,32 @@ const App = () => {
   const [totalScore, setTotalScore] = useState(0);
 
   const currentQuestionData = birdsData[currentQuestion];
+
+  if (currentQuestion === 6) {
+    return (
+      <div className="app min-vh-100">
+        <Header score={totalScore} />
+        <BirdCategory currentQuestion={0} />
+        <Container>
+          <h3 className="text-light">You won, your score: {totalScore}</h3>
+          <NextButton
+            isQuestionAnswered={true}
+            setCurrentQuestion={setCurrentQuestion}
+            currentQuestion={-1}
+            setIsQuestionAnswered={setIsQuestionAnswered}
+            setCorrectAnswer={setCorrectAnswer}
+            setSelectedAnswer={setSelectedAnswer}
+            totalScore={totalScore}
+            setTotalScore={setTotalScore}
+            setCurrentScore={setCurrentScore}
+            currentScore={-totalScore}
+          >
+            Play again
+          </NextButton>
+        </Container>
+      </div>
+    );
+  }
 
   return (
     <div className="app min-vh-100">
@@ -52,7 +80,9 @@ const App = () => {
         setTotalScore={setTotalScore}
         setCurrentScore={setCurrentScore}
         currentScore={currentScore}
-      />
+      >
+        Next question
+      </NextButton>
     </div>
   );
 };

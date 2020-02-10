@@ -16,6 +16,7 @@ const NextButton = ({
   setTotalScore,
   setCurrentScore,
   currentScore,
+  children,
 }) => {
   const updateCurrentQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
@@ -36,7 +37,7 @@ const NextButton = ({
         onClick={updateCurrentQuestion}
         className="mt-4"
       >
-        Next question
+        {children}
       </Button>
     </Container>
   );
