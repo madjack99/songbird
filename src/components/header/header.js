@@ -11,7 +11,7 @@ const Header = ({ score, currentScore }) => {
       <Navbar.Brand href="#home" className="text-danger font-weight-bold">
         Songbird
       </Navbar.Brand>
-      <span className="header__score text-primary">Score: {score}</span>
+      <span className="header__score text-light">Score: {score}</span>
     </Navbar>
   );
 };
