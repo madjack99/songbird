@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
+import './answer-item.css';
+
 const AnswerItem = props => {
   const {
     clickedOption,

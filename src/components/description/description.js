@@ -12,7 +12,7 @@ const Description = ({ selectedAnswer, currentQuestionData }) => {
     const { name, species, description } = bird;
 
     return (
-      <div className="description mt-2 p-2">
+      <div className="description mt-2 p-2 ">
         <Figure.Image rounded width={200} height={155} src={bird.image} />
         <QuestionAudio src={bird.audio} />
         <h2 className="description__name">{name}</h2>

@@ -22,8 +22,8 @@ const App = () => {
   const currentQuestionData = birdsData[currentQuestion];
 
   return (
-    <div className="app">
-      <Header score={totalScore} currentScore={currentScore} />
+    <div className="app min-vh-100">
+      <Header score={totalScore} />
       <BirdCategory currentQuestion={currentQuestion} />
       <Question
         currentQuestionData={currentQuestionData}

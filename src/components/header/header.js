@@ -8,9 +8,10 @@ const Header = ({ score, currentScore }) => {
   console.log(currentScore);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Songbird</Navbar.Brand>
-      <h2 className="header__score">Score: {score}</h2>
-      <h3 className="header__score">Cur score: {currentScore}</h3>
+      <Navbar.Brand href="#home" className="text-danger font-weight-bold">
+        Songbird
+      </Navbar.Brand>
+      <span className="header__score text-primary">Score: {score}</span>
     </Navbar>
   );
 };
