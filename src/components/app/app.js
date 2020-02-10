@@ -5,6 +5,7 @@ import BirdCategory from '../bird-category';
 import Question from '../question';
 import Main from '../main';
 import NextButton from '../next-button';
+import SuccessGif from '../success-gif';
 
 import birdsData from '../../services';
 import { generateRandomAnswer } from '../../utils';
@@ -29,7 +30,10 @@ const App = () => {
         <Header score={totalScore} />
         <BirdCategory currentQuestion={0} />
         <Container>
-          <h3 className="text-light">You won, your score: {totalScore}</h3>
+          <h3 className="text-light text-center ">
+            You won, your score: {totalScore}
+          </h3>
+          {totalScore === 30 && <SuccessGif />}
           <NextButton
             isQuestionAnswered={true}
             setCurrentQuestion={setCurrentQuestion}
