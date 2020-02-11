@@ -33,7 +33,7 @@ const App = () => {
         <BirdCategory currentQuestion={0} />
         <Container>
           <h3 className="text-light text-center ">
-            You won, your score: {totalScore}
+            You won, your score is {totalScore} out of 30.
           </h3>
           {totalScore === 30 && <SuccessGif />}
           <NextButton
