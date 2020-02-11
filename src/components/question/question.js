@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import QuestionAudio from '../question-audio';
 import QuestionInfo from '../question-info';
@@ -32,6 +33,12 @@ const Question = ({
       </Row>
     </Container>
   );
+};
+
+Question.propTypes = {
+  currentQuestionData: PropTypes.array.isRequired,
+  correctAnswer: PropTypes.number.isRequired,
+  isQuestionAnswered: PropTypes.bool.isRequired,
 };
 
 export default Question;

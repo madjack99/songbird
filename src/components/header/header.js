@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -13,6 +14,10 @@ const Header = ({ score }) => {
       <span className="header__score text-light">Score: {score}</span>
     </Navbar>
   );
+};
+
+Header.propTypes = {
+  score: PropTypes.number.isRequired,
 };
 
 export default Header;
