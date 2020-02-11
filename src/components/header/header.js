@@ -4,8 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import './header.css';
 
-const Header = ({ score, currentScore }) => {
-  console.log(currentScore);
+const Header = ({ score }) => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="#home" className="text-danger font-weight-bold">

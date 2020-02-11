@@ -22,6 +22,8 @@ const App = () => {
   const [currentScore, setCurrentScore] = useState(5);
   const [totalScore, setTotalScore] = useState(0);
 
+  console.log(`Correct answer for extra scope: ${correctAnswer} (zero based)`);
+
   const currentQuestionData = birdsData[currentQuestion];
 
   if (currentQuestion === 6) {

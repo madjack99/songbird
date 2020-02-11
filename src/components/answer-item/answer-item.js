@@ -27,9 +27,7 @@ const AnswerItem = props => {
     setSelectedAnswer(clickedOption);
     if (clickedOption !== correctAnswer) {
       setVariant('danger');
-      console.log('itemClicked', itemClicked);
       if (!itemClicked) {
-        console.log('click');
         setCurrentScore(currentScore - 1);
         setItemClicked(true);
       }
