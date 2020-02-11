@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -49,6 +50,17 @@ const AnswerItem = props => {
       {props.children}
     </ListGroup.Item>
   );
+};
+
+AnswerItem.propTypes = {
+  clickedOption: PropTypes.number,
+  correctAnswer: PropTypes.number,
+  setSelectedAnswer: PropTypes.func,
+  setIsQuestionAnswered: PropTypes.func,
+  currentQuestion: PropTypes.number,
+  isQuestionAnswered: PropTypes.bool,
+  setCurrentScore: PropTypes.func,
+  currentScore: PropTypes.number,
 };
 
 export default AnswerItem;

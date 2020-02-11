@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Container from 'react-bootstrap/Container';
 import './bird-category.css';
@@ -31,6 +32,10 @@ const BirdCategory = ({ currentQuestion = 0 }) => {
       <ul className="bird-category">{renderedCategories}</ul>
     </Container>
   );
+};
+
+BirdCategory.propTypes = {
+  currentQuestion: PropTypes.number,
 };
 
 export default BirdCategory;

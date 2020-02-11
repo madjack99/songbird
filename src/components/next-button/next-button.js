@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { generateRandomAnswer } from '../../utils';
 
@@ -41,6 +42,20 @@ const NextButton = ({
       </Button>
     </Container>
   );
+};
+
+NextButton.propTypes = {
+  isQuestionAnswered: PropTypes.bool,
+  currentQuestion: PropTypes.number,
+  setCurrentQuestion: PropTypes.func,
+  setIsQuestionAnswered: PropTypes.func,
+  setCorrectAnswer: PropTypes.func,
+  setSelectedAnswer: PropTypes.func,
+  totalScore: PropTypes.number,
+  setTotalScore: PropTypes.func,
+  setCurrentScore: PropTypes.func,
+  currentScore: PropTypes.number,
+  children: PropTypes.node,
 };
 
 export default NextButton;

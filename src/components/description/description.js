@@ -3,6 +3,7 @@ import React from 'react';
 import QuestionAudio from '../question-audio';
 
 import Figure from 'react-bootstrap/Figure';
+import PropTypes from 'prop-types';
 
 import './description.css';
 
@@ -28,6 +29,11 @@ const Description = ({ selectedAnswer, currentQuestionData }) => {
       <p>Choose a bird from the list</p>
     </div>
   );
+};
+
+Description.propTypes = {
+  selectedAnswer: PropTypes.number,
+  currentQuestionData: PropTypes.array,
 };
 
 export default Description;
